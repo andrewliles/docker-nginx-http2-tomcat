@@ -1,0 +1,14 @@
+html {
+	font-family: sans-serif;
+}
+ul { 
+    width:100%;
+}
+ul#flags li {
+    list-style-type:none; 
+    display:inline;
+    padding-left:20px;
+}
+img {
+    vertical-align: middle;
+}

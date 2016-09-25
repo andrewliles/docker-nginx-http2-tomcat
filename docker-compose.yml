@@ -1,0 +1,26 @@
+portal:
+  image: ehekatl/docker-nginx-http2
+  ports:
+    # Expose the load balancer on https://localhost:8443/ and  http://localhost:8080/
+    - "8080:80"
+    - "8443:443"
+  volumes:
+   - ./cluster/default.conf:/etc/nginx/nginx.conf
+   - ./cluster/certs:/etc/secrets  
+  links:
+   - tomcatOne:tomcat1
+   - tomcatTwo:tomcat2
+tomcatOne:
+  image: tomcat
+  volumes:
+   - ./cluster/server.xml:/usr/local/tomcat/conf/server.xml
+   - ./cluster/ROOT:/usr/local/tomcat/webapps/ROOT
+   - ./cluster/tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml
+tomcatTwo:
+  image: tomcat
+  volumes:
+   - ./cluster/server.xml:/usr/local/tomcat/conf/server.xml
+   - ./cluster/ROOT:/usr/local/tomcat/webapps/ROOT
+   - ./cluster/tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml
+
+
