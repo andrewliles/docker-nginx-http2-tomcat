@@ -11,8 +11,8 @@ Usage
  1. Clone the Repository
  2. In the cloned folder, enter ```docker-compose up```
  3. Try out by browsing to:
-  - https://localhost:8443/  for testing with HTTP/2
-  - http://localhost:8080/ for testing with HTTP/1.1
+  - [https://localhost:8443/](https://localhost:8443/) for testing with HTTP/2
+  - [http://localhost:8080/](http://localhost:8080/) for testing with HTTP/1.1
  4. You might want to slow things down; to do that you could use [throttle the bandwidth using the native Chrome tool](https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/network-conditions?hl=en).
 
 Credits to:
