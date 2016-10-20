@@ -110,10 +110,6 @@
       <Cluster className="org.apache.catalina.ha.tcp.SimpleTcpCluster"
                  channelSendOptions="8">
 
-          <Manager className="org.apache.catalina.ha.session.DeltaManager"
-                   expireSessionsOnShutdown="false"
-                   notifyListenersOnReplication="true"/>
-
           <Channel className="org.apache.catalina.tribes.group.GroupChannel">
             <Membership className="org.apache.catalina.tribes.membership.McastService"
                         address="228.0.0.4"

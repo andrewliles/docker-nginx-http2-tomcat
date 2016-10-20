@@ -1,0 +1,5 @@
+<Context>
+     <Manager className="org.apache.catalina.ha.session.DeltaManager"
+       expireSessionsOnShutdown="false"
+       notifyListenersOnReplication="true"/>
+</Context>
